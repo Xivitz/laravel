@@ -12,10 +12,6 @@
 */
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('welcome');
-});
-=======
     return view('blog.index');
 })->name('blog.index');
 
@@ -38,7 +34,6 @@ Route::get('about', function () {
     return view('other.about');
 })->name('other.about');
 
-
 Route::group( ['prefix' => 'admin'], function () {
     Route::get('', function () {
         return view('admin.index');
@@ -48,8 +43,16 @@ Route::group( ['prefix' => 'admin'], function () {
         return view('admin.create');
     })->name('admin.create');
 
-    Route::post('create', function () {
-        return "It works!";
+    Route::post('create', function (\Illuminate\Http\Request $request, \Illuminate\Validation\Factory $validator) {
+        $validator = $validator->make($request->all(), [
+            'title' => 'required|min:5',
+            'content' => 'required|min:10',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+        return redirect()->route('admin.index')
+                         ->with('info', 'Post created, Title: ' . $request->input('title'));
     })->name('admin.create');
 
     Route::get('edit/{id}', function ($id) {
@@ -67,8 +70,15 @@ Route::group( ['prefix' => 'admin'], function () {
         return view('admin.edit', ['post' => $post]);
     })->name('admin.edit');
 
-    Route::post('edit', function () {
-        return "It works!";
+    Route::post('edit', function (\Illuminate\Http\Request $request, \Illuminate\Validation\Factory $validator) {
+        $validator = $validator->make($request->all(), [
+            'title' => 'required|min:5',
+            'content' => 'required|min:10',
+        ]);
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator);
+        }
+        return redirect()->route('admin.index')
+                         ->with('info', 'Post edited, new Title: ' . $request->input('title'));
     })->name('admin.update');
 });
->>>>>>> e4b5b4d9c00c05f9c64614d772ef967567655883
