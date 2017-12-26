@@ -2,7 +2,7 @@
 @section('content')
     <div class="row">
         <div class="col-md-12">
-            <p class="quote">Ajustando essa merda aqui!!!</p>
+            <p class="quote">Fórum da DPU</p>
         </div>
     </div>
     @foreach($posts as $post)
