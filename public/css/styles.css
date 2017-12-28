@@ -1,9 +1,10 @@
 .quote {
-    font: 400 72px "Arizonia", Helvetica, sans-serif;
-    color: #F4645F;
+    font: 400 72px 'Orbitron', sans-serif;
+    color: #252c7c;
     text-align: center;
 }
 
 .post-title {
-    color: #F4645F;
+    font-family: 'Orbitron', sans-serif;
+    color: #9dbbfa;
 }
