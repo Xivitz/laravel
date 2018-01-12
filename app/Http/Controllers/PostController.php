@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 use App\Like;
 use Illuminate\Http\Request;
 use App\Post;
+use App\Tag;
 
 class PostController extends Controller
 {
     public function getIndex()
     {
-        $posts  = Post::orderBy('created_at', 'desc')->get();
+        $posts  = Post::orderBy('created_at', 'desc')->paginate(3);
         return view('blog.index', ['posts' => $posts]);
     }
 
@@ -35,13 +36,15 @@ class PostController extends Controller
 
     public function getAdminCreate()
     {
-        return view('admin.create');
+        $tags = Tag::all();
+        return view('admin.create', ['tags' => $tags]);
     }
 
     public function getAdminEdit($id)
     {
         $post = Post::find($id);
-        return view('admin.edit', ['post' => $post, 'postId' => $id]);
+        $tags = Tag::all();
+        return view('admin.edit', ['post' => $post, 'postId' => $id, 'tags' => $tags]);
     }
 
     public function postAdminCreate(Request $request)
@@ -55,6 +58,7 @@ class PostController extends Controller
             'content' => $request->input('content')
         ]);
         $post->save();
+        $post->tags()->attach($request->input('tags') === null ? [] : $request->input('tags'));
 
         return redirect()->route('admin.index')->with('info', 'Post created, Title is: ' . $request->input('title'));
     }
@@ -69,6 +73,14 @@ class PostController extends Controller
         $post->title = $request->input('title');
         $post->content = $request->input('content');
         $post->save();
+
+         /*Desanexa e depois anexa novamente, passos que o método sync executa de uma só vez
+          $post->tags()->detach();
+          $post->tags()->attach($request->input('tags') === null ? [] : $request->input('tags'));
+         */
+
+        $post->tags()->sync($request->input('tags') === null ? [] : $request->input('tags'));
+
         return redirect()->route('admin.index')->with('info', 'Post edited, new title is: ' . $request->input('title'));
     }
 
@@ -76,6 +88,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         $post->likes()->delete();
+        $post->tags()->detach();
         $post->delete();
         return redirect()->route('admin.index')->with('info', 'The post has been deleted!');
     }

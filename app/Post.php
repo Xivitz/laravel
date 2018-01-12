@@ -16,4 +16,14 @@ class Post extends Model
     {
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }
+
+    public function setTitleAttribute($value)
+    {
+        $this->attributes['title'] = mb_strtolower($value);
+    }
+
+    public function getTitleAttribute($value)
+    {
+        return mb_strtoupper($value);
+    }
 }
