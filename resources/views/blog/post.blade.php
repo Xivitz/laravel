@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-md-12">
             <p>{{ $post->content }}</p>
+            <a class="btn btn-primary" href="{{ URL::previous() }}">Voltar</a>
         </div>
     </div>
 @endsection

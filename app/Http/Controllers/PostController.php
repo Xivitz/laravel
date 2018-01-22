@@ -10,7 +10,7 @@ class PostController extends Controller
 {
     public function getIndex()
     {
-        $posts  = Post::orderBy('created_at', 'desc')->paginate(3);
+        $posts  = Post::orderBy('created_at', 'desc')->paginate(5);
         return view('blog.index', ['posts' => $posts]);
     }
 
@@ -44,7 +44,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         $tags = Tag::all();
-        return view('admin.edit', ['post' => $post, 'postId' => $id, 'tags' => $tags]);
+        return view('admin.edit', ['post' => $post, 'postId' => $id, 'tags' => $tags]); 
     }
 
     public function postAdminCreate(Request $request)

@@ -8,3 +8,27 @@
     font-family: 'Orbitron', sans-serif;
     color: #9dbbfa;
 }
+
+.carousel {
+    margin: auto;
+    width: 1170px;
+}
+
+.alert-success {
+    margin-top: 170px;
+    margin-bottom: 400px;
+    text-align: center;
+}
+
+.jumbotron {
+    padding-bottom: 5px;
+}
+
+.container {
+    margin-top: -10px;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
