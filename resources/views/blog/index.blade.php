@@ -65,6 +65,7 @@
                     </div>
                 </div>
             </div>
+            <!-- CAROUSEL -->
             <div class="col-md-8 offset-md-4">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
@@ -113,8 +114,8 @@
                         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                         <span class="sr-only">Next</span>
                     </a>
-                </div><!-- /.carousel -->
-            </div>
+                </div>
+            </div><!-- /.carousel -->
         </div>
     </div>
     <!-- Aside -->
@@ -131,6 +132,15 @@
                     centralizado na Secretaria de Atuação Itinerante (SIT), vinculada à Secretaria-Geral de Articulação Institucional (SGAI). No início por meio do referido projeto, deslocou-se Defensores Públicos
                     Federais e servidores para diversas cidades, de todas as regiões do país, com especial enfoque nos municípios mais carentes, com IDH (índice de desenvolvimento humano) mais baixo.
                 </p>
+            </div>
+            <div class="col-md-8">
+                <img class="img-responsive" src="/img/4.jpg" alt="">
+            </div>
+            <div class="col-md-8">
+                <h2>EDITORIAL</h2>
+                    <h5>Por Fernando Mauro Barbosa de Oliveira Junior</h5>
+                    <h5>Diretor da ESDPU, Defensor Público Federal de Categoria Especial</h5>
+                <hr>
             </div>
             <div class="col-md-offset-8">
                 <p style="text-align: justify">
@@ -155,15 +165,32 @@
                     Pública da União instalada em sua cidade, além de representar inegável ganho institucional, pois promove a divulgação e expansão do serviço defensorial, tornando a instituição mais próxima dos usuários.
                 </p>
             </div>
-            <div class="col-md-8">
-                <img class="img-responsive" src="/img/4.jpg" alt="">
+        </div>
+        <div class="row">
+            <div class="col-md-5">
+                <p style="text-align: justify">
+                    Prezados leitores, esta edição do Fórum DPU reservou esta tiragem para apresentar e tratar do tema das Ações Itinerantes da Defensoria Pública da União, porquanto são uma importante forma de assistência jurídica prestada
+                    aos mais vulneráveis, nos mais longínquos sítios deste país. O artigo da capa foi elaborado pelo Dr. Francisco Nóbrega, Secretário-Geral de Articulação Institucional – SGAI, cuja secretaria engloba a Secretaria de Atuação
+                    Itinerante – SIT, responsável pela ação itinerante da DPU. Desse modo, o Dr. Francisco esboça como funcionam os projetos que dão vida a esta relevante atividade da DPU.
+                    A presença da DPU, em atenção às pessoas afetadas com o rompimento da Barragem do Fundão, em Mariana/MG, foi objeto de análise pelo Dr. João Marcos (DRDH/ES) e pela Dra. Diana Andrade (DRDH/PB), meditando acerca da relevante
+                    função que compete à nossa Instituição, nos casos em que há uma exigência de atuação coletiva, rápida e eficaz, considerando as consequências suportadas pela população desta região.
+                    O itinerante do Rio Tapajós foi retratado pela Dra. Ingrid Soares. Vale reiterar o apontamento que se faz ao ressaltar que tão importante quanto o atendimento do itinerante em si é, também, a divulgação desta ação. Ademais,
+                    os itinerantes são, também, uma oportunidade de enriquecimento para os próprios Defensores, ao se aproximarem mais dos nossos assistidos e dos respectivos problemas, considerando que, por vezes, a quantidade de processos judiciais impede este ideal acercamento.
+                    A comunidade indígena é também priorizada nas atuações itinerantes da DPU, notadamente no esclarecimento de questões previdenciárias. Esta ação defensorial é destacada pelo Dr. Eduardo Freitas, em artigo que, brevemente, relata
+                    o atendimento realizado pela Unidade do Ceará, ressaltando a relevância do trabalho multidisciplinar, nesta oportunidade, com a participação de um sociólogo, que foi indispensável para o êxito da assistência.
+                    Foi reservada, do mesmo modo, uma seção do Fórum DPU, para trazer à tona e debater o atendimento às pessoas atingidas com a construção da hidrelétrica de Belo Monte. A Dra. Karina Rocha Mitleg Bayerl foi autora deste posicionamento.
+                    Mais uma vez, a DPU, utilizando-se do itinerante, vai ao encontro das pessoas alijadas de conhecimento jurídico para entenderem o que está acontecendo e se defenderem, neste caso, da empresa Norte Energia S.A. – NESA.
+                    A importância deste itinerante se percebe pelo fato de que foi instalada uma unidade da DPU em Altamira, a fim de que não ocorresse quebra de continuidade na assistência realizada.
+                    Por fim, como nos jornais anteriores, a última parte é dedicada a uma entrevista de pessoa não pertencente aos quadros da DPU. Aqui, Antonia Melo, representante do Movimento Xingu Vivo para Sempre (MXVPS), traz o seu ponto de vista sobre
+                    os problemas vivenciados pela comunidade de Altamira, com a instalação da hidrelétrica de Belo Monte, bem como sobre os serviços prestados pela DPU e a interação desta Instituição com a sociedade local.
+                    Boa leitura a todos!
+                </p>
+            </div>
+            <div class="col-md-offset-5 col-md-7">
+                <img class="img-responsive" src="/img/5.jpg" alt="">
             </div>
         </div>
     </div>
-    
-
-
-
 
 
 
